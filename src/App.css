@@ -1,0 +1,49 @@
+.portfolioWrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolioItems {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 0;
+  grid-gap: 10px;
+}
+
+.portfolioItem {
+  width: 100%;
+  margin: 0;
+  break-inside: avoid;
+  grid-row-end: span var(--row-span);
+  display: block;
+}
+
+.portfolioItem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.portfolioFilter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.filterChecker {
+  cursor: pointer;
+  background: #fffeff;
+  border: 1px solid;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+
+.filterChecker[data-state=active] {
+  background: #565455;
+  color: #fffeff;
+  border-color: #565455;
+  pointer-events: none;
+}
